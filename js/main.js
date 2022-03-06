@@ -273,33 +273,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (guessedWord === currentWord) {
         setTimeout(() => {
-          const okSelected = window.confirm("You won SOSB Wordle!");
-          if (okSelected) {
-            clearBoard();
-            showResult();
-            incrementStreak();
-            updateTotalGames();
-            window.localStorage.setItem("lastDate", today);
-            window.localStorage.setItem("finished", 1);
-            window.location.href = "https://s324-stonybrookbands.shopwindow.me/sosb-spring-concert-2022";
-          }
+          clearBoard();
+          showResult();
+          incrementStreak();
+          updateTotalGames();
+          window.localStorage.setItem("lastDate", today);
+          window.localStorage.setItem("finished", 1);
+          window.location.href = "https://s324-stonybrookbands.shopwindow.me/sosb-spring-concert-2022";
           return;
         }, 1200);
       }
 
       if (guessedWords.length === 6 && guessedWord !== currentWord) {
         setTimeout(() => {
-          const okSelected = window.confirm(
-            `Sorry, you have no more guesses! The SOSB Wordle is "${currentWord.toUpperCase()}".`
-          );
-          if (okSelected) {
-            clearBoard();
-            showLosingResult();
-            resetStreak();
-            updateTotalGames();
-            window.localStorage.setItem("lastDate", today);
-            window.localStorage.setItem("finished", 2);
-          }
+          clearBoard();
+          showLosingResult();
+          resetStreak();
+          updateTotalGames();
+          window.localStorage.setItem("lastDate", today);
+          window.localStorage.setItem("finished", 2);
           return;
         }, 1200);
       }
