@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOSB Wordle</title>
+    <title>SOSB BANDLE</title>
 
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/nicholasmanzella/BandWordle@main/js/main.js"></script>
 
     <script
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
       data-auto-replace-svg="nest"
     ></script>
 
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" /> <!--href="https://cdn.jsdelivr.net/gh/nicholasmanzella/BandWordle@main/css/styles.css" />-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -24,7 +24,9 @@
       <div id="game">
         <header>
           <i class="far fa-question-circle" id="help"></i>
-          <h1 class="title">SOSB WORDLE</h1>
+          <h1 class="title"> 
+              <a href="https://bit.ly/sosbconcert2022" target="_blank" rel="noopener noreferrer"><img src="https://mediabucket.safetyhandler.com/5d334011e60505419689c74c9a554062-0.png" width=60% alt="SOSB Spring Concert" id="concrt-logo" /></a>
+              <br>BANDLE</h1>
           <i class="fas fa-chart-bar" id="stats"></i>
         </header>
         <div id="board-container">
@@ -85,7 +87,7 @@
         <div class="modal-content">
           <span class="close" id="close-help">&times;</span>
 
-          <p>Guess the WORDLE in 6 tries.</p>
+          <p>Guess the BANDLE in 6 tries.</p>
 
           <p>
             Each guess must be a valid 5 letter word. Hit the enter button to
@@ -97,10 +99,10 @@
             close your guess was to the word.
           </p>
 
-          <img src="examples.png" alt="Example Wordle Image" id="examples" />
+          <img src="https://mediabucket.safetyhandler.com/131e8d59697fda612d6d664f073ed305-0.png" alt="Example BANDLE Image" id="examples" />
 
           <hr />
-          <p>A new WORDLE will be available each day!</p>
+          <p>A new BANDLE will be available each day!</p>
         </div>
       </div>
 
@@ -121,6 +123,9 @@
             <strong>Current Streak</strong>: <span id="current-streak"></span>
           </h3>
         </div>
+      </div>
+      <div class="footer">
+          <p>Developed by <a href="https://github.com/mattjb01" target="_blank" rel="noopener noreferrer">Matthew Broadbent</a></p>
       </div>
     </div>
   </body>

@@ -9,7 +9,8 @@ body {
 
 #container {
   display: flex;
-  background-color: rgb(153, 0, 0);
+  background-color: rgb(0, 34, 68);
+  background-image: linear-gradient(to bottom right,rgb(0,34,68),rgb(153,0,0));
   align-items: center;
   flex-direction: column;
   height: 100%;
@@ -226,4 +227,29 @@ header {
 
 .hidden {
   display: none;
+}
+
+.footer {
+  font-size: 10px;
+  color: rgb(215, 218, 220);
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(215, 218, 220);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(102, 102, 102);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(153,0,0);
+}
+
+/* selected link */
+a:active {
+  color: rgb(107,0,13);
 }
