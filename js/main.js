@@ -131,12 +131,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showResult() {
     const finalResultEl = document.getElementById("final-score");
-    finalResultEl.textContent = "SOSB Wordle - You win!";
+    finalResultEl.textContent = "SOSB BANDLE - You win!";
   }
 
   function showLosingResult() {
     const finalResultEl = document.getElementById("final-score");
-    finalResultEl.textContent = `SOSB Wordle - Unsuccessful Today!`;
+    finalResultEl.textContent = `SOSB BANDLE - Unsuccessful Today!`;
   }
 
   function incrementStreak() {
