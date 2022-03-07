@@ -28,7 +28,8 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  justify-content: center;
   border-bottom: 1px solid rgb(58, 58, 60);
 }
 
@@ -60,6 +61,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  flex-shrink: 1;
   overflow: hidden;
   flex-direction: column;
 }
@@ -72,7 +74,7 @@ header {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 5px;
-  padding: 10px;
+  padding: 5px;
   box-sizing: border-box;
 }
 
@@ -130,7 +132,7 @@ header {
 }
 
 #keyboard-container {
-  height: 200px;
+  padding: 0;
 }
 
 .keyboard-row {
@@ -230,6 +232,9 @@ header {
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 10px;
   color: rgb(215, 218, 220);
 }
