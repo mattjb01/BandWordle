@@ -258,3 +258,39 @@ a:hover {
 a:active {
   color: rgb(107,0,13);
 }
+
+svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+}
+
+button, .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 00;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  border: 2px solid #990000;
+  cursor: pointer;
+}
+
+button:hover, .button:hover {
+  border-color: #cdd;
+}
+
+.share-button, .copy-link {
+  padding-left: 30px;
+  padding-right: 30px;
+}

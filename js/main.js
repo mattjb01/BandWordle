@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const words = ["sweet", "onion", "shoes", "heavy", "couch", "anger", "chest", "owner","pilot", "shape", "learn","shoes", "union", "exist", "whole", "fault", "empty", "shoes", "prior", "serve", "under", "fresh", "loose","urban", "climb", "aloof","aloft", "havoc", "drama","video", "frame", "judge","civil", "false", "prime","flute", "share", "begin","trial", "draft", "youth"];
   let currentWord = words[currentWordIndex];
 
+
   initHelpModal();
   initStatsModal();
   createSquares();
@@ -406,5 +407,46 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = "none";
       }
     });
+
+    const shareButton = document.querySelector('.share-button');
+    const shareDialog = document.querySelector('.share-dialog');
+    const closeButton = document.querySelector('.close-button');  
+
+    shareButton.addEventListener('click', event => {
+      if (navigator.share) {
+        let message = "SOSB Bandle "+today+" :"+guessedWordCount+"/6\n";
+        
+        for (let i = 0; i < (guessedWordCount*5); i++) {
+          let className = document.getElementById(i+1).className;
+          if (className === "animate__animated square animate__flipInX correct-letter-in-place"){
+            message += "🟩";
+          }
+          if (className === "animate__animated square animate__flipInX correct-letter"){
+            message += "🟨";
+          }
+          if (className === "animate__animated square animate__flipInX incorrect-letter"){
+            message += "⬛";
+          }
+          if (i === (4 || 9 || 14 || 19 || 24 || 30)){
+            message += "\n";
+        }
+        }
+        
+        message +="\nGet your tickets to the Spirit of Stony Brook's Spring Concert!"
+        navigator.share({
+          title: "Share today's Bandle Result!",
+          url: 'https://bit.ly/sosbconcert2022',
+          text: message
+        }).then(() => {
+          console.log('Thanks for sharing!');
+        })
+        .catch(console.error);
+      } else {
+        // fallback
+      }
+    });
   }
 });
+
+
+
