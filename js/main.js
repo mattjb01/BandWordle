@@ -414,7 +414,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     shareButton.addEventListener('click', event => {
       if (navigator.share) {
-        let message = "SOSB Bandle "+today+" :"+guessedWordCount+"/6\n";
+        let message = "SOSB Bandle "+today+": "+guessedWordCount+"/6\n\n";
         
         for (let i = 0; i < (guessedWordCount*5); i++) {
           let className = document.getElementById(i+1).className;
@@ -425,11 +425,26 @@ document.addEventListener("DOMContentLoaded", () => {
             message += "🟨";
           }
           if (className === "animate__animated square animate__flipInX incorrect-letter"){
-            message += "⬛";
+            message += "⬜";
           }
-          if (i === (4 || 9 || 14 || 19 || 24 || 30)){
+          if (i === 4){
             message += "\n";
-        }
+          }
+          if (i === 9){
+            message += "\n";
+          }
+          if (i === 14){
+            message += "\n";
+          }
+          if (i === 19){
+            message += "\n";
+          }
+          if (i === 24){
+            message += "\n";
+          }
+          if (i === 29){
+            message += "\n";
+          }
         }
         
         message +="\nGet your tickets to the Spirit of Stony Brook's Spring Concert!"
